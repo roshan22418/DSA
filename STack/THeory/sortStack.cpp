@@ -1,13 +1,21 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+// time complexity is n^2 due to 1 + 2 + 3+ 4+ 5------n;
+
 void solve(stack<int> &st,int data){
     //first will be check for stack is empty or not because give underflow due to unavailiabilty of element;
-    if(st.empty()){
-        st.push(data);
-        return;
-    }
-    if(data>st.top()){
+    // if(st.empty()){
+    //     st.push(data);
+    //     return;
+    // }
+    // if(data>st.top() ){
+    //     st.push(data);
+    //     return;
+
+    // }
+    if(st.empty() ||data>st.top() ){
         st.push(data);
         return;
 
