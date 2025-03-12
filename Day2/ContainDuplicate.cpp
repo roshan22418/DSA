@@ -37,3 +37,52 @@ int main() {
     }
     return 0;
 }
+
+// Time Complexity: O(n)    
+// Space Complexity: O(n)
+// Input:
+// 2
+// 1 2 3 1
+// 1 2 3 4
+// Output:
+// 1
+// 0
+// Explanation:
+// Testcase 1: There is one duplicate element in the array, 1.
+// Testcase 2: There is no duplicate element in the array.  
+//
+
+
+// there are many other way like sorting the array and then checking the adjacent elements if they are same or not
+// Time Complexity: O(nlogn)
+// Space Complexity: O(1)
+
+// other way is to use unordered_map
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+// unordered_map<int,int> m1;
+// for(int i = 0;i<nums.size();i++){
+//     m1[nums[i]]++;
+// }
+// for(auto x:m1){
+//     if(x.second>1){
+//         return true; 
+//     }
+// }
+// return false;
+// }
+// };
+
+
+
+// other way use bit manipulation
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+// int n = nums.size();
+// int a = 0;
+// for(int i = 0;i<n;i++){
+//     a = a^nums[i];
+// }
+// return a;
+// }
+// };
