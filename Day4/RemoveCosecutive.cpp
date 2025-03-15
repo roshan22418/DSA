@@ -1,10 +1,15 @@
-
+// #problem statement: Given a string S delete the characters which are appearing more than once consecutively.
+// #Example:
+// #Input:
+// #S = aabb
+// #Output:  ab
+// #Explanation: 'a' at 2nd position is
+// #appearing 2nd time consecutively.
 //{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
 
 
-// } Driver Code Ends
 
 class Solution {
   public:
@@ -42,4 +47,43 @@ int main() {
     }
 }
 
-// } Driver Code Ends
+
+
+// Time complexity: O(n) where n is the length of the string.
+// Space complexity: O(n) where n is the length of the string.
+// Company Tags: Amazon, Microsoft, OYO Rooms, Paytm, Samsung, Snapdeal, Visa
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+string removeConsecutiveCharacter(string s,string snew,int index) {
+    if(index==s.size()){
+        return snew;
+    }
+    if(s[index]==s[index-1]){
+        return removeConsecutiveCharacter(s,snew,index+1);
+    }
+    else{
+        snew+=s[index];
+        return removeConsecutiveCharacter(s,snew,index+1);
+    }   
+    
+
+}
+
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        string s;
+        cin >> s;
+        string snew = "";
+        snew+=s[0];
+        cout << removeConsecutiveCharacter(s,snew,1) << endl;
+
+        cout << "~"
+             << "\n";
+    }
+}   
