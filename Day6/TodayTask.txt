@@ -1,0 +1,336 @@
+Today i revise about the DBMS 
+
+and know about the DBMS is stand for the data base managment system and management of the data is called DBMS
+and database is the group of the same data set 
+
+WHY use DBMS
+1. Data independence
+2. Efficient data access
+3. Data integrity and security
+4. Data administration
+5. Concurrent access and crash recovery
+6. Reduced application development time
+
+
+AND KNOW ABOUT THE ATRRIBUTES OF THE DBMS
+1. sIMPLE ATTRIBUTES example: name, age, salary
+2. COMPOSITE ATTRIBUTES example: address, name
+3. muti valued attributes example: phone number, email
+4. Derived attributes example: age, salary
+5. Key attributes example: id, name
+
+
+
+and then know about the Key 
+
+1. Super Key: A super key is a group of single or multiple keys which identifies rows in a table. It is a superset of a candidate key.
+2. Candidate Key: A candidate key is a set of attributes that uniquely identifies tuples in a table. It is a unique key.
+3. Primary Key: A primary key is a candidate key that is most appropriate to become the main key for a table. It is a unique key.
+4. Alternate Key: An alternate key is a candidate key that is not selected as the primary key for a table.
+5. Composite Key: A composite key is a key that consists of multiple attributes to uniquely identify rows in a table.
+6. Foreign Key: A foreign key is a key that is used to link two tables together. It is a field in one table that refers to the primary key in another table.
+
+
+
+
+
+and then know about the aggregate functions and know about which thing if nan value comes
+1. SUM(): It returns the total sum of a numeric column.
+2. MIN(): It returns the minimum value of a numeric column.
+3. MAX(): It returns the maximum value of a numeric column.
+4. COUNT(): It returns the number of rows that matches a specified criterion.
+5. AVG(): It returns the average value of a numeric column.
+
+
+and then about the constrained in SQL
+1. NOT NULL Constraint: Ensures that a column cannot have a NULL value.
+2. UNIQUE Constraint: Ensures that all values in a column are different.
+3. PRIMARY Key: Uniquely identifies each row/record in a database table.
+4. FOREIGN Key: Uniquely identifies a row/record in any of the given database table.
+5. CHECK Constraint: The CHECK constraint ensures that all values in a column satisfy certain conditions.
+6. DEFAULT Constraint: The DEFAULT constraint is used to provide a default value for a column.
+7. INDEX: Used to create and retrieve data from the database very quickly.
+
+
+
+
+And after tha i know about the types of the DBMS
+1. Hierarchical DBMS
+2. Network DBMS
+
+and then type of the command 
+1. DDL (Data Definition Language): It is used to define the structure that holds the data. For example, CREATE, ALTER, DROP statements.
+2. DML (Data Manipulation Language): It is used for manipulation of the data present in the database. For example, INSERT, UPDATE, DELETE statements.
+3. DCL (Data Control Language): It is used to control the visibility of data. For example, GRANT, REVOKE statements.
+4. TCL (Transaction Control Language): It is used to manage the transactions in the database. For example, COMMIT, ROLLBACK statements.
+
+
+AND THEN I KNOW ABOUT THE SQL
+SQL is the standard language for dealing with Relational Databases. SQL can be used to insert, search, update, and delete database records. SQL can do lots of other operations, including optimizing and maintenance of databases.
+AND KNOW ABOUT SOME COMMANDS OF THE SQL
+1. SELECT - extracts data from a database
+2. UPDATE - updates data in a database
+3. DELETE - deletes data from a database
+4. INSERT INTO - inserts new data into a database
+5. CREATE DATABASE - creates a new database
+6. ALTER DATABASE - modifies a database
+7. CREATE TABLE - creates a new table
+8. ALTER TABLE - modifies a table
+9. DROP TABLE - deletes a table
+10. CREATE INDEX - creates an index (search key)
+11. DROP INDEX - deletes an index
+
+
+
+and solve some prblem like 
+
+1) find the second highest salary of the employee
+select salary from employee ofder by salary desc limit 1,1
+
+2) find the nth highest salary of the employee
+select salary from employee order by salary desc limit n-1,1
+
+3) create a copy table of the employee with all value
+create table employee_copy as select * from employee
+
+4) create a table with the same structure as the employee table
+create table employee_copy like employee
+
+
+
+ANd ten knwo about the ACID properties of the DBMS
+
+1. Atomicity: It ensures that all the operations within the transaction are performed successfully. If any operation fails, the transaction is aborted.
+2. Consistency: It ensures that the database remains in a consistent state before and after the transaction.    
+3. Isolation: It ensures that multiple transactions can be executed concurrently without affecting each other.
+4. Durability: It ensures that the changes made by the transaction are permanent and are not lost even if the system crashes.
+
+and know about the type of the integrity in the DBMS
+
+1. Entity Integrity: It ensures that each row in a table is uniquely identified by a primary key.
+2. Referential Integrity: It ensures that the relationship between two tables is maintained correctly.
+3. Domain Integrity: It ensures that the data entered into a column is within the specified domain.
+4. User-Defined Integrity: It allows users to define their own integrity constraints.
+
+
+
+
+
+
+
+
+SOME DIFFERENECE BETWEEN THE 
+
+Delete, truncate, drop :- 
+1. Delete is a DML command, whereas truncate and drop are DDL commands.
+2. Delete is used to delete specific rows from a table, whereas truncate is used to delete all rows from a table.
+3. Delete is slower than truncate, whereas truncate is faster than delete.
+4. Delete can be rolled back, whereas truncate cannot be rolled back.
+5. Delete does not reset the identity of the table, whereas truncate resets the identity of the table.
+6. Delete does not release the space, whereas truncate releases the space.
+7. Drop is used to delete the table from the database.
+8. Drop delete all thing like schema and table and data
+9. Cannot undo this thing after drop the table drop the table is permanent
+10. Drop is a DDL command.
+
+
+
+where and Havind 
+
+
+1. WHERE clause is used to filter records based on a condition.
+2. HAVING clause is used to filter records based on a condition in a GROUP BY clause.
+
+grpup by and order by
+
+1. GROUP BY clause is used to group the result set based on one or more columns.
+2. ORDER BY clause is used to sort the result set based on one or more columns.
+
+char and varchar
+
+1. CHAR is a fixed-length data type, whereas VARCHAR is a variable-length data type.
+2. CHAR is faster than VARCHAR.
+3. CHAR takes up more space than VARCHAR.
+
+In and Exits
+
+1. IN operator is used to specify multiple values in a WHERE clause.
+2. EXISTS operator is used to check the existence of rows in a subquery.
+
+UNion and join  
+
+
+1. UNION operator is used to combine the result sets of two or more SELECT statements.
+2. JOIN clause is used to combine rows from two or more tables based on a related column between them.
+
+
+union minus and intersect
+
+1. UNION operator is used to combine the result sets of two or more SELECT statements.
+2. MINUS operator is used to return the rows from the first SELECT statement that are not returned by the second SELECT statement.
+3. INTERSECT operator is used to return the rows that are common to the result sets of two SELECT statements.
+
+
+
+FInaly know about the normalization in the DBMS
+
+1. First Normal Form (1NF): It ensures that each column in a table contains atomic values.
+2. Second Normal Form (2NF): It ensures that each non-key column is fully dependent on the primary key.
+3. Third Normal Form (3NF): It ensures that each non-key column is independent of other non-key columns.
+4. Boyce-Codd Normal Form (BCNF): It ensures that each determinant is a candidate key.
+5. Fourth Normal Form (4NF): It ensures that each multi-valued dependency is satisfied.
+6. Fifth Normal Form (5NF): It ensures that each join dependency is satisfied.
+7. Sixth Normal Form (6NF): It ensures that each join dependency is satisfied.
+
+
+and know about the SQL joins 
+
+1. INNER JOIN: It returns the rows that have matching values in both tables.
+2. LEFT JOIN: It returns all the rows from the left table and the matched rows from the right table.
+3. RIGHT JOIN: It returns all the rows from the right table and the matched rows from the left table.
+4. FULL JOIN: It returns all the rows when there is a match in either the left or right table.
+5. CROSS JOIN: It returns the Cartesian product of the two tables.
+
+
+and know about the views in the DBMS
+
+1. A view is a virtual table based on the result set of a SELECT statement.
+2. A view does not store the data in the database.
+3. A view is used to restrict access to the data.
+4. A view is used to simplify complex queries.
+5. A view is used to provide a layer of abstraction.
+
+
+
+and know about the like
+
+
+1. LIKE operator is used to search for a specified pattern in a column.
+2. LIKE operator is used with the WHERE clause.
+3. LIKE operator is used with the % and _ wildcards.
+4. % wildcard represents zero or more characters.
+5. _ wildcard represents a single character.
+
+
+
+
+
+and FInally we knwo about the transparency in the DBMS
+
+1. Data Transparency: It refers to the separation of the data from the applications that use the data.
+2. Transaction Transparency: It refers to the ability to hide the details of the transaction from the user.
+3. Access Transparency: It refers to the ability to access the data without knowing the physical location of the data.  
+4. Location Transparency: It refers to the ability to access the data without knowing the physical location of the data.
+5. Replication Transparency: It refers to the ability to replicate the data without the user knowing about it.
+6. Fragmentation Transparency: It refers to the ability to fragment the data without the user knowing about it.
+7. Failure Transparency: It refers to the ability to recover from failures without the user knowing about it.
+8. Migration Transparency: It refers to the ability to migrate the data without the user knowing about it.
+9. Performance Transparency: It refers to the ability to improve the performance without the user knowing about it.
+10. Security Transparency: It refers to the ability to secure the data without the user knowing about it.
+
+
+
+
+aND KNOW ABOUT SOME DIFFERENCE BETWEEN THE DBMS AND FILE SYSTEM
+
+
+1. DBMS stands for Database Management System, while the file system is a system used to store and manage files.
+2. DBMS is used to manage the database, while the file system is used to manage files.
+3. DBMS supports the relational database, while the file system does not support the relational database.
+4. DBMS supports the ACID properties, while the file system does not support the ACID properties.
+5. DBMS supports the normalization process, while the file system does not support the normalization process.
+6. DBMS supports the relationship between tables, while the file system does not support the relationship between tables.
+7. DBMS supports the SQL language, while the file system does not support the SQL language.
+8. DBMS supports the integrity constraints, while the file system does not support the integrity constraints.
+9. DBMS supports the data redundancy, while the file system does not support the data redundancy.
+10. DBMS supports the data consistency, while the file system does not support the data consistency.
+
+
+
+And know about the some difference between the DBMS and RDBMS
+1. DBMS stands for Database Management System, while RDBMS stands for Relational Database Management System.
+2. DBMS is used to manage the database, while RDBMS is used to manage the relational database.
+3. DBMS does not support a tabular structure, while RDBMS supports a tabular structure.
+4. DBMS does not support the ACID properties, while RDBMS supports the ACID properties.
+5. DBMS does not support the normalization process, while RDBMS supports the normalization process.
+6. DBMS does not support the relationship between tables, while RDBMS supports the relationship between tables.
+7. DBMS does not support the SQL language, while RDBMS supports the SQL language.
+8. DBMS does not support the integrity constraints, while RDBMS supports the integrity constraints.
+9. DBMS does not support the data redundancy, while RDBMS supports the data redundancy.
+10. DBMS does not support the data consistency, while RDBMS supports the data consistency.
+
+
+
+
+and then know about the some difference between the SQL and PL/SQL
+
+1. SQL stands for Structured Query Language, while PL/SQL stands for Procedural Language/Structured Query Language.
+2. SQL is used to perform operations on the database, while PL/SQL is used to write procedural code.
+3. SQL is a query language, while PL/SQL is a programming language.
+4. SQL is used to perform DML and DDL operations, while PL/SQL is used to write procedural code.
+5. SQL does not support procedural programming, while PL/SQL supports procedural programming.
+6. SQL does not support the conditional statements, while PL/SQL supports the conditional statements.
+7. SQL does not support the loops, while PL/SQL supports the loops.
+8. SQL does not support the exception handling, while PL/SQL supports the exception handling.
+9. SQL does not support the variables, while PL/SQL supports the variables.
+10. SQL does not support the functions, while PL/SQL supports the functions.
+
+
+
+
+anD THEN KNOW ABOUT THE SOME DIFFERENCE BETWEEN THE SQL AND MYSQL
+
+1. SQL stands for Structured Query Language, while MySQL is a relational database management system.
+2. SQL is a query language, while MySQL is a database software.
+3. SQL is used to perform operations on the database, while MySQL is used to manage the database.
+4. SQL is a standard language, while MySQL is a software that uses SQL.
+5. SQL does not provide a database, while MySQL provides a database.
+6. SQL does not provide a user interface, while MySQL provides a user interface.
+7. SQL does not provide a graphical tool, while MySQL provides a graphical tool.
+8. SQL does not provide a command-line tool, while MySQL provides a command-line tool.
+9. SQL does not provide a database server, while MySQL provides a database server.
+10. SQL does not provide a database engine, while MySQL provides a database engine.
+
+
+
+and know aboutthe some difference between the SQL and NoSQL
+
+1. SQL stands for Structured Query Language, while NoSQL stands for Not Only SQL.
+2. SQL is a query language, while NoSQL is a database management system.
+3. SQL is used to perform operations on the database, while NoSQL is used to manage the database.
+4. SQL is a standard language, while NoSQL is a non-relational database.
+5. SQL is a relational database, while NoSQL is a non-relational database.
+6. SQL does not support the unstructured data, while NoSQL supports the unstructured data.
+7. SQL does not support the distributed database, while NoSQL supports the distributed database.
+8. SQL does not support the horizontal scaling, while NoSQL supports the horizontal scaling.
+9. SQL does not support the big data, while NoSQL supports the big data.
+10. SQL does not support the schema-less database, while NoSQL supports the schema-less database.
+
+
+
+
+
+
+
+and then know about the some difference between the SQL and T-SQL
+
+
+1. SQL stands for Structured Query Language, while T-SQL stands for Transact-SQL.
+2. SQL is a query language, while T-SQL is a proprietary extension of SQL.
+3. SQL is a standard language, while T-SQL is a language developed by Microsoft.
+4. SQL is used to perform operations on the database, while T-SQL is used to write procedural code.
+5. SQL does not support the procedural programming, while T-SQL supports the procedural programming.
+6. SQL does not support the conditional statements, while T-SQL supports the conditional statements.
+7. SQL does not support the loops, while T-SQL supports the loops.
+8. SQL does not support the exception handling, while T-SQL supports the exception handling.
+9. SQL does not support the variables, while T-SQL supports the variables.
+10. SQL does not support the functions, while T-SQL supports the functions.
+
+
+
+
+
+
+
+
+
