@@ -3,14 +3,19 @@ using namespace std;
 
 #include<vector>
 
-int DuplicateNumberUsingFastAnsSlowPointer(vector<int> &arr){
+int DuplicateNumberUsingXor(vector<int> &arr){
     int ans  = 0;
     int length = arr.size();
     for (int i = 0; i < length; i++)
     {
         ans^=arr[i];
-        ans^= (i+1);
+        
     }
+    for (int i = 1; i < length; i++)
+    {
+        ans^= i;        
+    }
+    
     return ans;
     
     
@@ -25,9 +30,9 @@ int main(){
     for (int i = 0; i < length; i++)
     {
         cin >> arr[i];
-        cout << endl;
     }
-    int ans = DuplicateNumberUsingFastAnsSlowPointer(arr);
+    int ans = DuplicateNumberUsingXor(arr);
+    // cout<<ans<<endl;
     printf("this is answer %d",ans);
     return 0;
     
