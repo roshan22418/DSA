@@ -72,4 +72,34 @@ public:
         // }
         // return false;
     }
+
+
+    ListNode *detectCycle(ListNode *head) {
+        ListNode* slow = head;
+        ListNode* fast = head;
+        bool isCycle = false;
+        while(fast != NULL){
+            fast = fast->next;
+            if(fast != NULL){
+                fast = fast->next;
+                slow = slow->next;
+            }
+            if(slow == fast){
+                isCycle = true;
+                break;
+            }            
+        }
+        if(isCycle == true){
+            slow = head;
+            while(slow != fast){
+                slow = slow->next;
+                fast = fast ->next;
+            } 
+            return slow;
+
+        }
+        else{
+            return NULL;
+        }
+    }
 };
