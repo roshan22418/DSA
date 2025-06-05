@@ -94,3 +94,41 @@ public:
                 
     }
 };
+
+
+
+
+
+//Second way 
+
+class Solution {
+public:
+
+    bool pathSolver(TreeNode* root,int targetSum,int sum){
+        if(root == NULL){
+            return false;
+        }
+        sum += root->val;
+        if(root->left == NULL && root->right == NULL){
+            if(sum == targetSum){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        bool leftAns = pathSolver(root->left,targetSum,sum);
+        bool rightAns = pathSolver(root->right,targetSum,sum);
+        bool finalAns = (leftAns || rightAns);
+        return finalAns;
+    }
+    bool hasPathSum(TreeNode* root, int targetSum) {
+        if(root == NULL){
+            return false;
+        }
+        bool finalAns = pathSolver(root,targetSum,0);
+        return finalAns;
+
+        
+    }
+};
