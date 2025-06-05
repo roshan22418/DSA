@@ -10,6 +10,9 @@ IF PASS BY REFERENCE THEN NEED TO BE BACKTRACK THE VALUE SO EASY WAY TO DO PASS 
 #include<iostream>
 using namespace std;
 
+#include<vector>
+
+
 
 
 class TreeNode{
@@ -35,6 +38,35 @@ class TreeNode{
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+
+
+
+ // insert all path that have targetsum 
+
+ class Solution {
+public:
+    void pathSumSolver(TreeNode* root, int targetSum,vector<vector<int>> &ans,vector<int> temp,int sum){
+        if(root == NULL){
+            return;
+        }
+        sum += root->val;
+        temp.push_back(root->val);
+        if(root->left == NULL && root->right == NULL && targetSum == sum){
+            ans.push_back(temp);
+            return;
+        }
+        pathSumSolver(root->left,targetSum,ans,temp,sum);
+        pathSumSolver(root->right,targetSum,ans,temp,sum);
+
+    } 
+    vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
+        vector<vector<int>> ans;
+        vector<int> temp;
+        int sum = 0;
+        pathSumSolver(root,targetSum,ans,temp,sum);
+        return ans;
+    }
+};
 
 
 
