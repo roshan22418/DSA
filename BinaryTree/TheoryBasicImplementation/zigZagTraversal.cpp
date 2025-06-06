@@ -3,6 +3,9 @@ flag tha lToRdir that help tp me track which time LtoRdir or RtoLdir to push in 
 
 #include<iostream>
 using namespace std;
+#include<vector>
+#include<queue>
+
 
 
 class TreeNode{
