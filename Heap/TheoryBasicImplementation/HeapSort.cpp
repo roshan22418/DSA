@@ -1,3 +1,9 @@
+/*so if we do HeapSort then we need to first create a heap (max)
+after creating the max heap then you do swap the first and last element and then decrease the size and
+call the heapify of the frist index and 
+time complexity is "O(nlog(n))"
+space complxity is "O(n)"*/
+
 
 #include<iostream>
 using namespace std;
