@@ -42,10 +42,18 @@ int gcd(int a,int b){
 
 
 
+int lCM(int a,int b){
+    int gcdAns = gcd(a,b);
+    return (a*b)/gcdAns;
+}
+
+
+
 int main(){
     int a = 0;
     int b = 12;
     int gcdAns = gcdByRecurssion(a,b);
-    cout<<gcdAns<<endl;
+    cout<<"GCD of two number " <<gcdAns<<endl;
+    cout<<"LCM of two number "<<lCM(a,b);
     return 0;
 }
