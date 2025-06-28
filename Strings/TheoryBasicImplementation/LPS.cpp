@@ -23,7 +23,7 @@ vector<int> longestPrefixSuffix(string str){
                 suffix++;
             }
             else{
-                prefix = lsp[suffix-1]-1;
+                prefix = lsp[prefix-1]-1;
                 if(prefix==-1){
                     prefix=0;
                 }
